@@ -1,14 +1,13 @@
 import React from "react";
 import "./DcpHeader.css";
+import LogoSiata from "../assets/img/LogoSiata.svg";
 
 function DcpHeader() {
   return (
     <React.Fragment>
       <header>
         <h1>Dagrd Panel Camaras</h1>
-        <figure>
-          <img src="#" alt="logo" />
-        </figure>
+        <img className="companyLogo" src={LogoSiata} alt="logo Siata" />
       </header>
     </React.Fragment>
   );

@@ -1,6 +1,28 @@
 header {
+  background-color: var(--teal-dark-primary);
+  color: var(--white);
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  border: 1px red solid;
+  flex: row wrap;
+  justify-content: space-between;
+  overflow: hidden;
+  width: 100vw;
+}
+
+@media (max-width: 600px) {
+  header {
+    justify-content: flex-end;
+  }
+  header > h1 {
+    display: none;
+  }
+}
+
+header > h1 {
+  padding: 0px 28px;
+}
+
+.companyLogo {
+  max-width: 150px;
+  min-width: 50px;
+  padding: 7px 28px;
 }
