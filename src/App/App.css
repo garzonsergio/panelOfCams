@@ -1,4 +1,6 @@
 * {
+  box-sizing: border-box;
+
   /* Primary Colors */
   --blue-light-primary: #1487b9;
   --blue-dark-primary: #22467f;
@@ -11,15 +13,17 @@
   --green-light-secondary: #c7d15d;
   --green-dark-secondary: #8abb73;
   --white: #ffffff;
-
-  /* Fonts */
-  font-family: Arial, Helvetica, sans-serif;
 }
 
+html {
+  /* Fonts */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
+}
 /* Mobile */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 }
 
 /* Desktop */
-@media (min-width: 600px) {
+@media (min-width: 768px) {
 }
