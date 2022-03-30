@@ -1,0 +1,13 @@
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border: 1px red solid;
+}
+
+ul > li {
+  padding: 5px;
+  text-transform: capitalize;
+  border: 1px red solid;
+}

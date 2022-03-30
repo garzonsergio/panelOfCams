@@ -1,0 +1,25 @@
+* {
+  /* Primary Colors */
+  --blue-light-primary: #1487b9;
+  --blue-dark-primary: #22467f;
+  --teal-light-primary: #004d56;
+  --teal-dark-primary: #09202e;
+
+  /* Secondary Colors */
+  --blue-light-secondary-1: #70afba;
+  --blue-light-secondary-2: #98d1dd;
+  --green-light-secondary: #c7d15d;
+  --green-dark-secondary: #8abb73;
+  --white: #ffffff;
+
+  /* Fonts */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+}
+
+/* Desktop */
+@media (min-width: 600px) {
+}

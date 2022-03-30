@@ -1,0 +1,9 @@
+footer {
+  border: 1px solid red;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: absolute;
+  width: 100vw;
+}
