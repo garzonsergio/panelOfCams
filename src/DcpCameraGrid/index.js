@@ -8,9 +8,9 @@ function DcpCameraGrid() {
   return (
     <React.Fragment>
       <section>
-        <DcpCam></DcpCam>
-        <DcpCam></DcpCam>
-        <DcpCam></DcpCam>
+        {camsSiata.map((cam) => (
+          <DcpCam route={cam.route} />
+        ))}
       </section>
     </React.Fragment>
   );

@@ -1,12 +1,10 @@
 import React from "react";
 import "./DcpCam.css";
 
-function DcpCam() {
+function DcpCam(props) {
   return (
     <React.Fragment>
-      <figure>
-        <img src="#" alt="camX" />
-      </figure>
+      <img src={props.route} />
     </React.Fragment>
   );
 }
