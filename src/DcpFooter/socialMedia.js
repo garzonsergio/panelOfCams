@@ -2,6 +2,8 @@ import facebook from "../assets/img/facebook.svg";
 import instagram from "../assets/img/instagram.svg";
 import twitter from "../assets/img/twitter.svg";
 import youtube from "../assets/img/youtube.svg";
+import worldwide from "../assets/img/worldwide.svg";
+
 const socialMedia = [
   {
     name: "facebook",
@@ -24,5 +26,11 @@ const socialMedia = [
     icon: youtube,
   },
 ];
+const webpages = [
+  {
+    name: "worldwide",
+    icon: worldwide,
+  },
+];
 
-export { socialMedia };
+export { socialMedia, webpages };

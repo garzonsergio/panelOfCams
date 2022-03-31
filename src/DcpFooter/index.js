@@ -1,6 +1,7 @@
 import React from "react";
 import "./DcpFooter.css";
 import { socialMedia } from "./socialMedia.js";
+import { webpages } from "./socialMedia.js";
 
 function DcpFooter() {
   return (
@@ -18,21 +19,28 @@ function DcpFooter() {
               </a>
             ))}
           </span>
-          <div className="twitterUsers">
-            <p>@areametropol</p>
-            <p>@siatamedellin</p>
-          </div>
         </div>
+        <div className="twitter-users">
+          <a href="https://twitter.com/Areametropol">@areametropol</a>
+          <a href="https://twitter.com/siatamedellin">@siatamedellin</a>
+        </div>
+
         <div className="websites-container">
           <span>
-            <img src="#" />
-            <p>www.metropol.gov.co</p>
+            <img className="mediaImage" src={webpages[0].icon} />
+            <a href="www.metropol.gov.co">www.metropol.gov.co</a>
           </span>
-          <p>www.siata.gov.co</p>
+          <a href="www.siata.gov.co">www.siata.gov.co</a>
         </div>
-        <span>
-          <p>Desarrollado por SIATA I 2022 - 2025</p>
-        </span>
+        <div className="contact-container">
+          <ul>
+            <li>Carrera 48A # 10Sur-123 - Sede Investigación y desarrollo</li>
+            <li>Calle 50 # 71-147 - Torre SIATA</li>
+            <li>Teléfono: 4038870 </li>
+            <li>contacto@siata.gov.co</li>
+            <li>Desarrollado por SIATA I 2022 - 2025</li>
+          </ul>
+        </div>
       </footer>
     </React.Fragment>
   );

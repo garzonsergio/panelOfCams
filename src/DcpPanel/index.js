@@ -25,7 +25,7 @@ function DcpPanel() {
   return (
     <React.Fragment>
       <main>
-        <div className="panelContainer">
+        <div className="panel-container">
           <ul>
             {cameraGroup.map((group) => (
               <li key={group.name} className={group.name}>

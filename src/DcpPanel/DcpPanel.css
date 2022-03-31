@@ -3,17 +3,17 @@ main {
   justify-content: center;
   width: 100vw;
 }
-
-.panelContainer,
+.panel-container
+.panel-container >
 ul {
   border-radius: 0.5rem;
 }
-.panelContainer {
+.panel-container {
   border: 1px red solid;
   margin-top: 1.6rem;
   width: 90%;
 }
-ul {
+.panel-container > ul {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -22,7 +22,7 @@ ul {
   padding: 0;
 }
 
-ul > li {
+.panel-container >ul > li {
   border-radius: 0.5rem 0.5rem 0 0;
   border: 0.15rem var(--blue-light-secondary-1) solid;
   color: var(--blue-light-secondary-1);
@@ -34,12 +34,12 @@ ul > li {
   overflow: hidden;
 }
 
-ul > li:hover {
+.panel-container > ul > li:hover {
   background-color: var(--blue-light-secondary-1);
   color: white;
 }
 
-ul > li:first-child {
+.panel-container > ul > li:first-child {
   background-color: var(--blue-light-secondary-1);
   color: white;
 }
