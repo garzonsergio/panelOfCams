@@ -34,10 +34,12 @@ function DcpFooter() {
         </div>
         <div className="contact-container">
           <ul>
-            <li>Carrera 48A # 10Sur-123 - Sede Investigación y desarrollo</li>
-            <li>Calle 50 # 71-147 - Torre SIATA</li>
-            <li>Teléfono: 4038870 </li>
-            <li>contacto@siata.gov.co</li>
+            <li className="address">
+              Carrera 48A # 10Sur-123 - Sede Investigación y desarrollo
+            </li>
+            <li className="address">Calle 50 # 71-147 - Torre SIATA</li>
+            <li className="address">Teléfono: 6044038870 </li>
+            <li className="address">contacto@siata.gov.co</li>
             <li>Desarrollado por SIATA I 2022 - 2025</li>
           </ul>
         </div>
