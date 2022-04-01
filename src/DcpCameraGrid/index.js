@@ -7,7 +7,7 @@ console.log(camsSiata);
 function DcpCameraGrid() {
   return (
     <React.Fragment>
-      <section>
+      <section className="cameras-grid-container">
         {camsSiata.map((cam) => (
           <DcpCam route={cam.route} />
         ))}

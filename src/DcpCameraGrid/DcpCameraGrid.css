@@ -1,5 +1,6 @@
-section {
-  display: flex;
-  flex-wrap: wrap;
+.cameras-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   border: 1px solid red;
+  width: 100%;
 }

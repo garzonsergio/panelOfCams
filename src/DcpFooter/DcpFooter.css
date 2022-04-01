@@ -4,7 +4,7 @@ footer {
   color: var(--white);
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: relative;
   width: 100vw;
 }
 
