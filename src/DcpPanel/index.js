@@ -28,14 +28,12 @@ function DcpPanel() {
         <div className="panel-container">
           <ul>
             {cameraGroup.map((group) => (
-              <a href="/">
-                <li key={group.name} className={group.name}>
-                  {group.name}
-                </li>
-              </a>
+              <li key={group.name} className={group.name}>
+                {group.name}
+              </li>
             ))}
           </ul>
-          <DcpCameraGrid typeCam="cielo"></DcpCameraGrid>
+          <DcpCameraGrid typeCam="incendio"></DcpCameraGrid>
         </div>
       </main>
     </React.Fragment>
