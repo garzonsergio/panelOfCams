@@ -1,3 +1,5 @@
+import React from "react";
+
 const url = "https://siata.gov.co/ultimasFotosCamaras/";
 
 const linksCams = [
@@ -143,4 +145,13 @@ function camsDetails(array) {
 
 const camsSiata = camsDetails(linksCams);
 
+function FilteredCams(props) {
+  return (
+    <React.Fragment>
+      {camsSiata.filter((cam) => cam.typeOfCam === props.typeCam)}
+    </React.Fragment>
+  );
+}
+
 export { camsSiata };
+export { FilteredCams };
