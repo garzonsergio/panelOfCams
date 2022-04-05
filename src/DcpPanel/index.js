@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./DcpPanel.css";
 import { DcpCameraGrid } from "../DcpCameraGrid";
 
@@ -22,18 +22,25 @@ const cameraGroup = [
 ];
 
 function DcpPanel() {
+  const [typeCam, setTypeCam] = useState("nivel");
   return (
     <React.Fragment>
       <main>
         <div className="panel-container">
           <ul>
             {cameraGroup.map((group) => (
-              <li key={group.name} className={group.name}>
+              <li
+                key={group.name}
+                className={group.name}
+                onClick={() => {
+                  return setTypeCam(group.name);
+                }}
+              >
                 {group.name}
               </li>
             ))}
           </ul>
-          <DcpCameraGrid typeCam="incendio"></DcpCameraGrid>
+          <DcpCameraGrid typeCam={typeCam}></DcpCameraGrid>
         </div>
       </main>
     </React.Fragment>
