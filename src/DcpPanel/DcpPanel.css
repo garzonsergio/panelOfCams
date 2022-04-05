@@ -7,7 +7,6 @@ main {
   border-radius: 0.5rem;
 }
 .panel-container {
-  border: 1px red solid;
   /* margin-top: 1.6rem; */
   width: 100%;
 }
