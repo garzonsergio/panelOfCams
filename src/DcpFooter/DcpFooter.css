@@ -56,11 +56,11 @@ footer {
   .contact-container > ul {
     text-align: center;
   }
-
+  /* 
   .contact-container > ul > li:last-child {
     font-style: italic;
     margin-top: 1.8rem;
-  }
+  } */
 }
 
 @media (min-width: 600px) {
@@ -77,6 +77,7 @@ footer {
   .websites-container {
     display: flex;
     flex-direction: column;
+    border-right: 1px solid var(--white);
   }
   .twitter-users > a,
   .websites-container > a,
@@ -85,7 +86,6 @@ footer {
     padding: 0.2rem 2rem 0.2rem 0.8rem;
   }
   .twitter-users > a {
-    border-right: 1px solid var(--white);
     justify-content: center;
   }
 
@@ -100,16 +100,21 @@ footer {
     margin-left: 3.4rem;
   }
   .contact-container {
-    text-align: right;
+    text-align: left;
     width: 60%;
-  }
-  .address {
-    display: none;
+    padding-left: 2rem;
   }
 
-  .contact-container > ul > li:last-child {
+  .contact-container > ul {
+    margin: 0;
+  }
+  /* .address {
+    display: none;
+  } */
+
+  /* .contact-container > ul > li:last-child {
     font-size: large;
     font-style: italic;
     font-weight: 600;
-  }
+  } */
 }

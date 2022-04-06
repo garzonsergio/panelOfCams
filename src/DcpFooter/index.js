@@ -35,12 +35,12 @@ function DcpFooter() {
         <div className="contact-container">
           <ul>
             <li className="address">
-              Carrera 48A # 10Sur-123 - Sede Investigación y desarrollo
+              Sistema de Alerta Temprana de Medellín y el Valle de Aburrá
             </li>
             <li className="address">Calle 50 # 71-147 - Torre SIATA</li>
-            <li className="address">Teléfono: 6044038870 </li>
-            <li className="address">contacto@siata.gov.co</li>
-            <li>Desarrollado por SIATA I 2022 - 2025</li>
+            <li className="address">Carrera 48a #10 sur - 123 Casa SIATA </li>
+            <li className="address">Teléfono: 604 434 19 87</li>
+            {/* <li>Desarrollado por SIATA I 2022 - 2025</li> */}
           </ul>
         </div>
       </footer>

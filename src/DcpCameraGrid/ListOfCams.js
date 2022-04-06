@@ -1,5 +1,3 @@
-import React from "react";
-
 const url = "https://siata.gov.co/ultimasFotosCamaras/";
 
 const linksCams = [
@@ -124,7 +122,7 @@ function typeOfCams(camRoute) {
     camRoute.includes("_deslizamiento") ||
     camRoute.includes("_socavacion")
   ) {
-    return "deslizamiento";
+    return "movimientos de masa";
   } else if (camRoute.includes("_incendio_")) {
     return "incendio";
   } else {

@@ -23,6 +23,7 @@ const cameraGroup = [
 
 function DcpPanel() {
   const [typeCam, setTypeCam] = useState("nivel");
+
   return (
     <React.Fragment>
       <main>
