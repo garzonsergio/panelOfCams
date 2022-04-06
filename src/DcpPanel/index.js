@@ -30,7 +30,7 @@ function DcpPanel() {
         <div className="panel-container">
           <ul>
             {cameraGroup.map((group) => (
-              <li
+              <button
                 key={group.name}
                 className={group.name}
                 onClick={() => {
@@ -38,7 +38,7 @@ function DcpPanel() {
                 }}
               >
                 {group.name}
-              </li>
+              </button>
             ))}
           </ul>
           <DcpCameraGrid typeCam={typeCam}></DcpCameraGrid>

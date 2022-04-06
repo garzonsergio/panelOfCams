@@ -4,7 +4,9 @@ import "./DcpCam.css";
 function DcpCam(props) {
   return (
     <React.Fragment>
-      <img src={props.route} />
+      <a href={props.route} target="_blank">
+        <img src={props.route} alt={props.route} />
+      </a>
     </React.Fragment>
   );
 }

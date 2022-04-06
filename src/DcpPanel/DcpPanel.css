@@ -19,7 +19,7 @@ main {
   padding: 0;
 }
 
-.panel-container > ul > li {
+.panel-container > ul > button {
   border-radius: 0.5rem 0.5rem 0 0;
   border: 0.15rem var(--blue-light-secondary-1) solid;
   color: var(--blue-light-secondary-1);
@@ -30,14 +30,15 @@ main {
   overflow: hidden;
   padding: 0.5rem;
   text-transform: capitalize;
+  background: none;
 }
 
-.panel-container > ul > li:hover {
+.panel-container > ul > button:hover {
   background-color: var(--blue-light-secondary-1);
   color: white;
 }
 
-.panel-container > ul > li:active {
+.panel-container > ul > button:focus {
   background-color: var(--blue-light-secondary-2);
   color: white;
 }
