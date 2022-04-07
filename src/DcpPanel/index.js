@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./DcpPanel.css";
 import { DcpCameraGrid } from "../DcpCameraGrid";
 
@@ -23,7 +23,13 @@ const cameraGroup = [
 
 function DcpPanel() {
   const [typeCam, setTypeCam] = useState("nivel");
+  const [index, setIndex] = useState(0);
 
+  useEffect(() => {
+    setInterval(() => {
+      setIndex((counter) => (counter < 3 ? counter + 1 : 0));
+    }, 10000);
+  }, []);
   return (
     <React.Fragment>
       <main>
@@ -41,7 +47,7 @@ function DcpPanel() {
               </button>
             ))}
           </ul>
-          <DcpCameraGrid typeCam={typeCam}></DcpCameraGrid>
+          <DcpCameraGrid typeCam={cameraGroup[index].name}></DcpCameraGrid>
         </div>
       </main>
     </React.Fragment>
