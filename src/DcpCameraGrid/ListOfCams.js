@@ -138,6 +138,7 @@ function camsDetails(array) {
       typeOfCam: typeOfCams(array[i]),
     });
   }
+
   return cams;
 }
 
