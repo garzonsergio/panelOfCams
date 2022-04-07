@@ -22,13 +22,13 @@ const cameraGroup = [
 ];
 
 function DcpPanel() {
-  const [typeCam, setTypeCam] = useState("nivel");
   const [index, setIndex] = useState(0);
+  const [typeCam, setTypeCam] = useState(index);
 
   useEffect(() => {
     setInterval(() => {
       setIndex((counter) => (counter < 3 ? counter + 1 : 0));
-    }, 10000);
+    }, 9000);
   }, []);
   return (
     <React.Fragment>
