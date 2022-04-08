@@ -23,7 +23,6 @@ const cameraGroup = [
 
 function DcpPanel() {
   const [index, setIndex] = useState(0);
-  // const [typeCam, setTypeCam] = useState("");
 
   useEffect(() => {
     setInterval(() => {
