@@ -7,7 +7,7 @@ function DcpCam(props) {
   useEffect(() => {
     setInterval(() => {
       setReload(() => Date.now());
-    }, 120000);
+    }, 6000);
     // 2 min
   }, []);
 
