@@ -26,6 +26,7 @@ function DcpPanel() {
 
   useEffect(() => {
     setInterval(() => {
+      document.activeElement.blur();
       setIndex((index) => (index < 3 ? index + 1 : 0));
     }, 9000);
   }, []);
