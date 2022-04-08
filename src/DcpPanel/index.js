@@ -5,29 +5,29 @@ import { DcpCameraGrid } from "../DcpCameraGrid";
 const cameraGroup = [
   {
     name: "nivel",
-    actived: true,
+    index: 0,
   },
   {
     name: "cielo",
-    actived: false,
+    index: 1,
   },
   {
     name: "movimientos de masa",
-    actived: false,
+    index: 2,
   },
   {
     name: "incendio",
-    actived: false,
+    index: 3,
   },
 ];
 
 function DcpPanel() {
   const [index, setIndex] = useState(0);
-  const [typeCam, setTypeCam] = useState(index);
+  // const [typeCam, setTypeCam] = useState("");
 
   useEffect(() => {
     setInterval(() => {
-      setIndex((counter) => (counter < 3 ? counter + 1 : 0));
+      setIndex((index) => (index < 3 ? index + 1 : 0));
     }, 9000);
   }, []);
   return (
@@ -40,7 +40,7 @@ function DcpPanel() {
                 key={group.name}
                 className={group.name}
                 onClick={() => {
-                  return setTypeCam(group.name);
+                  return setIndex(group.index);
                 }}
               >
                 {group.name}
