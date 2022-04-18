@@ -1,29 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./DcpPanel.css";
 import { DcpCameraGrid } from "../DcpCameraGrid";
 
 const cameraGroup = [
   {
     name: "nivel",
-    actived: true,
+    index: 0,
   },
   {
     name: "cielo",
-    actived: false,
+    index: 1,
   },
   {
     name: "movimientos de masa",
-    actived: false,
+    index: 2,
   },
   {
     name: "incendio",
-    actived: false,
+    index: 3,
   },
 ];
 
 function DcpPanel() {
-  const [typeCam, setTypeCam] = useState("nivel");
+  const [index, setIndex] = useState(0);
 
+  useEffect(() => {
+    setInterval(() => {
+      document.activeElement.blur();
+      setIndex((index) => (index < 3 ? index + 1 : 0));
+    }, 100000);
+  }, []);
   return (
     <React.Fragment>
       <main>
@@ -34,14 +40,14 @@ function DcpPanel() {
                 key={group.name}
                 className={group.name}
                 onClick={() => {
-                  return setTypeCam(group.name);
+                  return setIndex(group.index);
                 }}
               >
                 {group.name}
               </button>
             ))}
           </ul>
-          <DcpCameraGrid typeCam={typeCam}></DcpCameraGrid>
+          <DcpCameraGrid typeCam={cameraGroup[index].name}></DcpCameraGrid>
         </div>
       </main>
     </React.Fragment>

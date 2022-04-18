@@ -6,7 +6,7 @@ function DcpHeader() {
   return (
     <React.Fragment>
       <header>
-        <h1>Dagrd Panel Camaras</h1>
+        <h1>Visualizador de Cámaras Medellín</h1>
         <img className="companyLogo" src={LogoSiata} alt="logo Siata" />
       </header>
     </React.Fragment>

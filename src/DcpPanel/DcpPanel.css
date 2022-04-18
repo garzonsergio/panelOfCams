@@ -16,8 +16,11 @@ main {
   border-radius: 0.5rem;
 }
 .panel-container {
-  /* margin-top: 1.6rem; */
+  margin: 1.6rem 0;
   width: 95%;
+  border: 0.15rem var(--blue-light-secondary-1) solid;
+  border-radius: 10px 10px 0 0;
+  border-top: none;
 }
 .panel-container > ul {
   display: flex;

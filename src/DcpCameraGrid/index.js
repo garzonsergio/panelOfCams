@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./DcpCameraGrid.css";
 import { DcpCam } from "../DcpCam";
 import { camsSiata } from "./ListOfCams";
@@ -10,9 +10,14 @@ function DcpCameraGrid(props) {
         {camsSiata
           .filter((cam) => cam.typeOfCam === props.typeCam)
           .map((cam) => (
-            <DcpCam route={cam.route} key={cam.route} />
+            <DcpCam
+              route={cam.route}
+              key={cam.route}
+              nameOfCam={cam.nameOfCam}
+            />
           ))}
       </section>
+      {/* <p>{camsSiata}</p> */}
     </React.Fragment>
   );
 }
