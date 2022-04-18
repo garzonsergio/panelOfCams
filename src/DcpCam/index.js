@@ -13,9 +13,12 @@ function DcpCam(props) {
 
   return (
     <React.Fragment>
-      <a href={props.route} target="_blank">
-        <img src={`${props.route}?${reload}`} alt={props.route} />
-      </a>
+      <figure>
+        <a href={props.route} target="_blank">
+          <img src={`${props.route}?${reload}`} alt={props.route} />
+        </a>
+        <h4>Hello My Friend</h4>
+      </figure>
     </React.Fragment>
   );
 }

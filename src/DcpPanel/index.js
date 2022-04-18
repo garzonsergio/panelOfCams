@@ -28,7 +28,7 @@ function DcpPanel() {
     setInterval(() => {
       document.activeElement.blur();
       setIndex((index) => (index < 3 ? index + 1 : 0));
-    }, 120000);
+    }, 10000);
   }, []);
   return (
     <React.Fragment>
