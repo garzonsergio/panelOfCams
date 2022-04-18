@@ -1,6 +1,7 @@
 figure {
   border: 1px solid var(--blue-light-secondary-1);
   margin: 1rem;
+  text-align: center;
 }
 a {
   margin: 0;
@@ -8,4 +9,11 @@ a {
 }
 img {
   width: 100%;
+}
+
+.title-cam {
+  font-size: 1.6rem;
+  font-weight: 500;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
 }
