@@ -47,6 +47,13 @@ const linksCamsAMVA = [
   "ultimacam_nivel_picacha_aguas_frias.jpg",
 ];
 
+const titleFilter = (title) =>
+  title
+    .replace("ultimacam_", "")
+    .replace(".jpg", "")
+    .replaceAll("_", " ")
+    .toLowerCase();
+
 function camsDetails(array) {
   let cams = [];
   for (let i = 0; i < array.length; i++) {
@@ -54,41 +61,25 @@ function camsDetails(array) {
       cams.push({
         route: `${url}${array[i]}`,
         typeOfCam: "cielo",
-        nameOfCam: `${array[i]
-          .replace("ultimacam_", "")
-          .replace(".jpg", "")
-          .replaceAll("_", " ")
-          .toLowerCase()}`,
+        nameOfCam: `${titleFilter(array[i])}`,
       });
     } else if (i < 21) {
       cams.push({
         route: `${url}${array[i]}`,
         typeOfCam: "movimientos de masa",
-        nameOfCam: `${array[i]
-          .replace("ultimacam_", "")
-          .replace(".jpg", "")
-          .replaceAll("_", " ")
-          .toLowerCase()}`,
+        nameOfCam: `${titleFilter(array[i])}`,
       });
     } else if (i < 32) {
       cams.push({
         route: `${url}${array[i]}`,
         typeOfCam: "incendio",
-        nameOfCam: `${array[i]
-          .replace("ultimacam_", "")
-          .replace(".jpg", "")
-          .replaceAll("_", " ")
-          .toLowerCase()}`,
+        nameOfCam: `${titleFilter(array[i])}`,
       });
     } else if (i > 31) {
       cams.push({
         route: `${url}${array[i]}`,
         typeOfCam: "nivel",
-        nameOfCam: `${array[i]
-          .replace("ultimacam_", "")
-          .replace(".jpg", "")
-          .replaceAll("_", " ")
-          .toLowerCase()}`,
+        nameOfCam: `${titleFilter(array[i])}`,
       });
     }
   }
