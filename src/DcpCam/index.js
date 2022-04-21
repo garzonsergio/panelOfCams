@@ -5,7 +5,7 @@ import { DcpContext } from "../DcpContext/DcpContext";
 function DcpCam(props) {
   return (
     <DcpContext.Consumer>
-      {({ reload }) => (
+      {({ reload, camsSiata }) => (
         <figure>
           <a href={props.route} target="_blank">
             <img src={`${props.route}?${reload}`} alt={props.route} />

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./DcpCameraGrid.css";
 import { DcpCam } from "../DcpCam";
 import { camsSiata } from "./ListOfCams";

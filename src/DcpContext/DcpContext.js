@@ -21,6 +21,7 @@ function DcpProvider(props) {
       setIndex((index) => (index < 3 ? index + 1 : 0));
     }, 100000);
   }, []);
+
   return (
     <DcpContext.Provider value={{ reload, setReload, index, setIndex }}>
       {props.children}
