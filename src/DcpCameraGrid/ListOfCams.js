@@ -88,6 +88,5 @@ function camsDetails(array) {
 }
 
 const camsSiata = camsDetails(linksCamsAMVA);
-console.log("TCL ~ file: ListOfCams.js ~ line 75 ~ camsSiata", camsSiata);
 
 export { camsSiata };

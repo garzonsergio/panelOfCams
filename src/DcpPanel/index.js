@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./DcpPanel.css";
 import { DcpCameraGrid } from "../DcpCameraGrid";
-
+import { DcpContext } from "../DcpContext/DcpContext";
 const cameraGroup = [
   {
     name: "nivel",
@@ -22,35 +22,29 @@ const cameraGroup = [
 ];
 
 function DcpPanel() {
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    setInterval(() => {
-      document.activeElement.blur();
-      setIndex((index) => (index < 3 ? index + 1 : 0));
-    }, 100000);
-  }, []);
   return (
-    <React.Fragment>
-      <main>
-        <div className="panel-container">
-          <ul>
-            {cameraGroup.map((group) => (
-              <button
-                key={group.name}
-                className={group.name}
-                onClick={() => {
-                  return setIndex(group.index);
-                }}
-              >
-                {group.name}
-              </button>
-            ))}
-          </ul>
-          <DcpCameraGrid typeCam={cameraGroup[index].name}></DcpCameraGrid>
-        </div>
-      </main>
-    </React.Fragment>
+    <DcpContext.Consumer>
+      {({ index, setIndex }) => (
+        <main>
+          <div className="panel-container">
+            <ul>
+              {cameraGroup.map((group) => (
+                <button
+                  key={group.name}
+                  className={group.name}
+                  onClick={() => {
+                    return setIndex(group.index);
+                  }}
+                >
+                  {group.name}
+                </button>
+              ))}
+            </ul>
+            <DcpCameraGrid typeCam={cameraGroup[index].name}></DcpCameraGrid>
+          </div>
+        </main>
+      )}
+    </DcpContext.Consumer>
   );
 }
 
