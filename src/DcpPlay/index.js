@@ -1,4 +1,5 @@
 import React from "react";
+import "./DcpPlay.css";
 import Pause from "../assets/img/pause.svg";
 import Play from "../assets/img/play_arrow.svg";
 import { DcpContext } from "../DcpContext";
@@ -8,11 +9,11 @@ function DcpPlay() {
     <DcpContext.Consumer>
       {({ play, playFunction }) => (
         <div className="bottonsMovements">
-          <button onClick={() => playFunction()}>
+          <button className="play-button" onClick={() => playFunction()}>
             {play ? (
-              <img className="pause-button" src={Pause} alt="pausa" />
+              <img className="pause-icon" src={Pause} alt="pausa" />
             ) : (
-              <img className="play-button" src={Play} alt="reproducir" />
+              <img className="play-icon" src={Play} alt="reproducir" />
             )}
           </button>
 

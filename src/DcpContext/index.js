@@ -12,25 +12,24 @@ function DcpProvider(props) {
     // 2 min
   }, []);
 
-  //   States to switch the Group of Cams to Show
-
   // Play button state
   const [play, setPlay] = useState(true);
 
-  // Timer of Switching cameras
+  // Timer of Switching cameras and Play control
   const [index, setIndex] = useState(0);
   let intervalId = useRef();
   let changeIndexCams = () => setIndex((index) => (index < 3 ? index + 1 : 0));
 
   const playFunction = () => {
     !play
-      ? (intervalId.current = setInterval(changeIndexCams, 9000))
+      ? (intervalId.current = setInterval(changeIndexCams, 10000))
       : clearInterval(intervalId.current);
     setPlay((play) => !play);
   };
 
   useEffect(() => {
-    intervalId.current = setInterval(changeIndexCams, 9000);
+    intervalId.current = setInterval(changeIndexCams, 10000);
+
     return () => clearInterval(intervalId.current);
   }, []);
 
