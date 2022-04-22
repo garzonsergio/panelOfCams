@@ -1,0 +1,12 @@
+@media (max-width: 768px) {
+  .bottonsMovements {
+    margin-left: 30vw;
+  }
+}
+.bottonsMovements > img {
+  max-width: 28px;
+  cursor: pointer;
+}
+p {
+  color: white;
+}

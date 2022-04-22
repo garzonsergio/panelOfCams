@@ -1,6 +1,6 @@
 import React from "react";
 import "./DcpCam.css";
-import { DcpContext } from "../DcpContext/DcpContext";
+import { DcpContext } from "../DcpContext";
 
 function DcpCam(props) {
   return (
