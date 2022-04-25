@@ -26,24 +26,29 @@ function DcpPanel() {
   return (
     <DcpContext.Consumer>
       {({ index, setIndex }) => (
-        <main>
-          <div className="panel-container">
-            <ul>
-              {cameraGroup.map((group) => (
-                <button
-                  key={group.name}
-                  className={group.name}
-                  onClick={() => {
-                    return setIndex(group.index);
-                  }}
-                >
-                  {group.name}
-                </button>
-              ))}
-            </ul>
-            <DcpCameraGrid typeCam={cameraGroup[index].name}></DcpCameraGrid>
-          </div>
-        </main>
+        <React.Fragment>
+          <main>
+            <div className="left-arrow-buttom"></div>
+            <div className="panel-container">
+              <ul>
+                {cameraGroup.map((group) => (
+                  <button
+                    key={group.name}
+                    className={group.name}
+                    onClick={() => {
+                      return setIndex(group.index);
+                    }}
+                  >
+                    {group.name}
+                  </button>
+                ))}
+              </ul>
+
+              <DcpCameraGrid typeCam={cameraGroup[index].name}></DcpCameraGrid>
+            </div>
+            <div className="right-arrow-buttom"></div>
+          </main>
+        </React.Fragment>
       )}
     </DcpContext.Consumer>
   );
