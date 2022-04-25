@@ -16,9 +16,6 @@ header {
   header > h1 {
     display: none;
   }
-  .bottonsMovements {
-    margin-left: 30vw;
-  }
 }
 
 header > h1 {
@@ -29,9 +26,4 @@ header > h1 {
   max-width: 150px;
   min-width: 50px;
   padding: 7px 28px;
-}
-
-.bottonsMovements > img {
-  max-width: 28px;
-  cursor: pointer;
 }

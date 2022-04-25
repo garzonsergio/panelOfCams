@@ -1,23 +1,25 @@
-figure {
-  display: flex;
+.cam-container {
   border: 1px solid var(--blue-light-secondary-1);
-  margin: 0.5rem;
-  text-align: center;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
+  text-align: center;
+  margin: 0;
+  /* width: 100%; */
 }
-a {
+.cam-container > a {
   margin: 0;
   padding: 0;
+  /* width: 100%; */
 }
-img {
-  aspect-ratio: 1;
+.cam-container > a > img {
+  aspect-ratio: 1/1;
   background-color: black;
   object-fit: contain;
-  width: 100%;
+  width: 22.5vw;
 }
 
-.title-cam {
+.cam-container > .title-cam {
   font-size: 1.6rem;
   font-weight: 500;
   font-family: "Segoe UI", Arial, Helvetica, sans-serif;

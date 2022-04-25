@@ -2,6 +2,7 @@ import React from "react";
 import "./DcpPanel.css";
 import { DcpCameraGrid } from "../DcpCameraGrid";
 import { DcpContext } from "../DcpContext";
+import { DcpPlay } from "../DcpPlay";
 
 const cameraGroup = [
   {
@@ -25,10 +26,9 @@ const cameraGroup = [
 function DcpPanel() {
   return (
     <DcpContext.Consumer>
-      {({ index, setIndex }) => (
+      {({ index, setIndex, moveRight, moveLeft }) => (
         <React.Fragment>
           <main>
-            <div className="left-arrow-buttom"></div>
             <div className="panel-container">
               <ul>
                 {cameraGroup.map((group) => (
@@ -45,8 +45,18 @@ function DcpPanel() {
               </ul>
 
               <DcpCameraGrid typeCam={cameraGroup[index].name}></DcpCameraGrid>
+              <div className="controls-container">
+                <div
+                  className="left-arrow-buttom"
+                  onClick={() => moveLeft()}
+                ></div>
+                <DcpPlay />
+                <div
+                  className="right-arrow-buttom"
+                  onClick={() => moveRight()}
+                ></div>
+              </div>
             </div>
-            <div className="right-arrow-buttom"></div>
           </main>
         </React.Fragment>
       )}

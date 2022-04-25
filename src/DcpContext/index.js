@@ -8,7 +8,7 @@ function DcpProvider(props) {
   useEffect(() => {
     setInterval(() => {
       setReload(() => Date.now());
-    }, 6000);
+    }, 120000);
     // 2 min
   }, []);
 
@@ -22,15 +22,30 @@ function DcpProvider(props) {
 
   const playFunction = () => {
     !play
-      ? (intervalId.current = setInterval(changeIndexCams, 10000))
+      ? (intervalId.current = setInterval(changeIndexCams, 40000))
       : clearInterval(intervalId.current);
     setPlay((play) => !play);
   };
 
   useEffect(() => {
-    intervalId.current = setInterval(changeIndexCams, 10000);
+    intervalId.current = setInterval(changeIndexCams, 40000);
 
     return () => clearInterval(intervalId.current);
+  }, []);
+
+  // Switch inside a group of cameras
+  let scrollId = useRef();
+
+  const moveRight = () =>
+    (scrollId.current.scrollLeft = scrollId.current.scrollWidth);
+  const moveLeft = () => (scrollId.current.scrollLeft = 0);
+
+  useEffect(() => {
+    setInterval(() => {
+      scrollId.current.scrollLeft === 0 ? moveRight() : moveLeft();
+    }, 10000);
+
+    // 5 min
   }, []);
 
   return (
@@ -43,6 +58,9 @@ function DcpProvider(props) {
         play,
         setPlay,
         playFunction,
+        scrollId,
+        moveRight,
+        moveLeft,
       }}
     >
       {props.children}
