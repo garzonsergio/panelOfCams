@@ -1,7 +1,8 @@
 import React from "react";
 import "./DcpPanel.css";
 import { DcpCameraGrid } from "../DcpCameraGrid";
-import { DcpContext } from "../DcpContext/DcpContext";
+import { DcpContext } from "../DcpContext";
+
 const cameraGroup = [
   {
     name: "nivel",
