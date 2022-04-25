@@ -22,13 +22,13 @@ function DcpProvider(props) {
 
   const playFunction = () => {
     !play
-      ? (intervalId.current = setInterval(changeIndexCams, 40000))
+      ? (intervalId.current = setInterval(changeIndexCams, 10000))
       : clearInterval(intervalId.current);
     setPlay((play) => !play);
   };
 
   useEffect(() => {
-    intervalId.current = setInterval(changeIndexCams, 40000);
+    intervalId.current = setInterval(changeIndexCams, 58000);
 
     return () => clearInterval(intervalId.current);
   }, []);
@@ -40,12 +40,14 @@ function DcpProvider(props) {
     (scrollId.current.scrollLeft = scrollId.current.scrollWidth);
   const moveLeft = () => (scrollId.current.scrollLeft = 0);
 
+  const autoScroll = () =>
+    scrollId.current.scrollLeft === 0 ? moveRight() : moveLeft();
+
   useEffect(() => {
     setInterval(() => {
-      scrollId.current.scrollLeft === 0 ? moveRight() : moveLeft();
-    }, 10000);
-
-    // 5 min
+      autoScroll();
+    }, 20000);
+    // 2 min
   }, []);
 
   return (

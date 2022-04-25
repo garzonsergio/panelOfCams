@@ -5,7 +5,10 @@
     width: 100%;
   }
   .panel-container > ul > button {
-    width: 50%;
+    min-width: calc(100% / 2.3);
+  }
+  .panel-container > ul > button:nth-child(3) {
+    min-width: calc(60%);
   }
 }
 main {
@@ -31,7 +34,6 @@ main {
 
 .panel-container > ul > button {
   background: none;
-  /* border-radius: 0.5rem 0.5rem 0 0; */
   border: none;
   border-bottom: 0.1rem rgba(128, 128, 128, 0.4) solid;
   color: var(--blue-light-secondary-1);
@@ -39,7 +41,7 @@ main {
   font-family: Arial;
   font-size: 1.8rem;
   font-weight: 600;
-  min-width: calc(100% / 4);
+  width: calc(100% / 4);
   overflow: hidden;
   padding: 1rem 0.5rem;
   text-transform: capitalize;

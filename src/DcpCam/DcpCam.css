@@ -1,3 +1,14 @@
+@media (max-width: 600px) {
+  .cam-container {
+    min-width: 100%;
+  }
+  .cam-container > a {
+    min-width: 100%;
+  }
+  .cam-container > a > img {
+    min-width: 100%;
+  }
+}
 .cam-container {
   border: 1px solid var(--blue-light-secondary-1);
   display: flex;
