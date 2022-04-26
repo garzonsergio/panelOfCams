@@ -1,19 +1,15 @@
-@media (max-width: 768px) {
-  .bottonsMovements {
-    margin-left: 30vw;
-  }
-}
-
 .play-button {
   background: none;
-  border: 1px solid var(--white);
+  /* border: 1px solid var(--blue-light-secondary-1); */
+  border: none;
   border-radius: 5px;
   max-width: 38px;
 }
-.bottonsMovements > img {
+.bottonsMovements > button > img {
   max-width: 100%;
   cursor: pointer;
+  padding-top: 1rem;
 }
 p {
-  color: var(--white);
+  color: var(--blue-light-secondary-1);
 }

@@ -25,7 +25,7 @@ footer {
   padding: 0;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .social-media-container {
     display: flex;
     flex-direction: row;
@@ -63,7 +63,7 @@ footer {
   } */
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   footer {
     display: flex;
     flex-direction: row;
@@ -107,6 +107,7 @@ footer {
 
   .contact-container > ul {
     margin: 0;
+    font-size: 1.4rem;
   }
   /* .address {
     display: none;
