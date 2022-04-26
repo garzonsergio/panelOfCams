@@ -4,11 +4,14 @@
     overflow: scroll;
     width: 100%;
   }
-  .panel-container > ul > button {
+  .panel-container > ul > a {
     min-width: calc(100% / 2.3);
+    margin: 0;
+    padding: 0;
   }
-  .panel-container > ul > button:nth-child(3) {
-    min-width: calc(60%);
+
+  .panel-container > ul > a:nth-child(3) {
+    min-width: calc(72%);
   }
 }
 main {
@@ -18,6 +21,17 @@ main {
 }
 .panel-container .panel-container > ul {
   border-radius: 0.5rem;
+}
+
+@media (min-width: 600px) {
+  .panel-container > ul > a {
+    min-width: 20%;
+    margin: 0;
+    padding: 0;
+  }
+  .panel-container > ul > a:nth-child(3) {
+    min-width: 40%;
+  }
 }
 .panel-container {
   margin: 1.6rem 0;
@@ -31,8 +45,13 @@ main {
   margin: 0 0 0.5rem 0;
   padding: 0;
 }
-
-.panel-container > ul > button {
+.panel-container > ul > a > button {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  min-width: 100%;
+}
+.panel-container > ul > a > button {
   background: none;
   border: none;
   border-bottom: 0.1rem rgba(128, 128, 128, 0.4) solid;
@@ -47,13 +66,13 @@ main {
   text-transform: capitalize;
 }
 
-.panel-container > ul > button:hover {
+.panel-container > ul > a > button:hover {
   background-color: rgba(128, 128, 128, 0.1);
   /* opacity: 10%; */
   /* color: white; */
 }
 
-.panel-container > ul > button:focus {
+.panel-container > ul > a > button:focus {
   box-sizing: border-box;
   background-color: var(--blue-light-secondary-2);
   color: white;
