@@ -32,11 +32,10 @@ function DcpPanel() {
             <div className="panel-container">
               <ul>
                 {cameraGroup.map((group) => (
-                  <a href={"#" + group.name}>
+                  <a href={"#" + group.index}>
                     <button
                       key={group.name}
-                      className={group.name}
-                      id={group.name}
+                      id={group.index}
                       onClick={() => {
                         return setIndex(group.index);
                       }}

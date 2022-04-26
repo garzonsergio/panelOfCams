@@ -22,13 +22,14 @@ function DcpProvider(props) {
 
   const playFunction = () => {
     !play
-      ? (intervalId.current = setInterval(changeIndexCams, 10000))
+      ? (intervalId.current = setInterval(changeIndexCams, 12000))
       : clearInterval(intervalId.current);
     setPlay((play) => !play);
   };
 
   useEffect(() => {
-    intervalId.current = setInterval(changeIndexCams, 58000);
+    console.log(intervalId);
+    intervalId.current = setInterval(changeIndexCams, 12000);
 
     return () => clearInterval(intervalId.current);
   }, []);
@@ -36,12 +37,24 @@ function DcpProvider(props) {
   // Switch inside a group of cameras
   let scrollId = useRef();
 
-  const moveRight = () =>
-    (scrollId.current.scrollLeft = scrollId.current.scrollWidth);
-  const moveLeft = () => (scrollId.current.scrollLeft = 0);
+  const moveRight = () => {
+    let scrollItem = scrollId.current;
+    let scrollWidth = scrollId.current.scrollWidth;
+
+    scrollItem.scrollLeft !== scrollWidth
+      ? (scrollItem.scrollLeft += scrollWidth / scrollItem.childElementCount)
+      : setIndex(3);
+  };
+  const moveLeft = () => {
+    let scrollItem = scrollId.current;
+    let scrollWidth = scrollId.current.scrollWidth;
+    scrollItem.scrollLeft -= scrollWidth / scrollItem.childElementCount;
+  };
 
   const autoScroll = () =>
-    scrollId.current.scrollLeft === 0 ? moveRight() : moveLeft();
+    scrollId.current.scrollLeft < scrollId.current.scrollWidth
+      ? moveRight()
+      : moveLeft();
 
   useEffect(() => {
     setInterval(() => {

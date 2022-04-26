@@ -1,4 +1,4 @@
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .panel-container > ul {
     display: flex;
     overflow: scroll;
@@ -23,14 +23,14 @@ main {
   border-radius: 0.5rem;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .panel-container > ul > a {
-    min-width: 20%;
+    min-width: 24%;
     margin: 0;
     padding: 0;
   }
   .panel-container > ul > a:nth-child(3) {
-    min-width: 40%;
+    min-width: 28%;
   }
 }
 .panel-container {

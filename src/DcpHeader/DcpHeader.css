@@ -11,7 +11,7 @@ header {
 
 @media (max-width: 768px) {
   header {
-    justify-content: space-between;
+    justify-content: flex-end;
   }
   header > h1 {
     display: none;
