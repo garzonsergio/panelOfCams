@@ -59,8 +59,7 @@ function DcpProvider(props) {
   useEffect(() => {
     setInterval(() => {
       autoScroll();
-    }, 20000);
-    // 2 min
+    }, 20000);    
   }, []);
 
   return (
