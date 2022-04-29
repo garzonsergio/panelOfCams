@@ -26,7 +26,14 @@ const cameraGroup = [
 function DcpPanel() {
   return (
     <DcpContext.Consumer>
-      {({ index, setIndex, moveRight, moveLeft }) => (
+      {({
+        index,
+        setIndex,
+        moveRight,
+        moveLeft,
+        moveGroupRight,
+        moveGroupLeft,
+      }) => (
         <React.Fragment>
           <main>
             <div className="panel-container">
@@ -49,13 +56,21 @@ function DcpPanel() {
               <DcpCameraGrid typeCam={cameraGroup[index].name}></DcpCameraGrid>
               <div className="controls-container">
                 <div
-                  className="left-arrow-buttom"
+                  className="left-arrow-buttom global"
+                  onClick={() => moveGroupLeft()}
+                ></div>
+                <div
+                  className="left-arrow-buttom local"
                   onClick={() => moveLeft()}
                 ></div>
                 <DcpPlay />
                 <div
-                  className="right-arrow-buttom"
+                  className="right-arrow-buttom local"
                   onClick={() => moveRight()}
+                ></div>
+                <div
+                  className="right-arrow-buttom global"
+                  onClick={() => moveGroupRight()}
                 ></div>
               </div>
             </div>

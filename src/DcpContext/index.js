@@ -34,6 +34,10 @@ function DcpProvider(props) {
     return () => clearInterval(intervalId.current);
   }, []);
 
+  //Switch group of camera with arrows
+  const moveGroupRight = () => setIndex((index) => (index < 3 ? index + 1 : 0));
+  const moveGroupLeft = () => setIndex((index) => (index > 0 ? index - 1 : 3));
+
   // Switch inside a group of cameras
   let scrollId = useRef();
 
@@ -57,9 +61,7 @@ function DcpProvider(props) {
       : moveLeft();
 
   useEffect(() => {
-    setInterval(() => {
-      autoScroll();
-    }, 20000);    
+    setInterval(() => autoScroll(), 20000);
   }, []);
 
   return (
@@ -75,6 +77,8 @@ function DcpProvider(props) {
         scrollId,
         moveRight,
         moveLeft,
+        moveGroupRight,
+        moveGroupLeft,
       }}
     >
       {props.children}

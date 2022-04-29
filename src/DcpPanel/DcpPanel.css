@@ -13,6 +13,10 @@
   .panel-container > ul > a:nth-child(3) {
     min-width: calc(72%);
   }
+
+  .global {
+    display: none;
+  }
 }
 main {
   display: flex;
@@ -31,6 +35,9 @@ main {
   }
   .panel-container > ul > a:nth-child(3) {
     min-width: 28%;
+  }
+  .local {
+    display: none;
   }
 }
 .panel-container {
