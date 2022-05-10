@@ -26,11 +26,15 @@ function DcpFooter() {
         </div>
 
         <div className="websites-container">
-          <span>
-            <img className="mediaImage" src={webpages[0].icon} />
+          <img
+            className="mediaImage"
+            src={webpages[0].icon}
+            alt="worldwide globe"
+          />
+          <div className="websites-links">
             <a href="www.metropol.gov.co">www.metropol.gov.co</a>
-          </span>
-          <a href="www.siata.gov.co">www.siata.gov.co</a>
+            <a href="www.siata.gov.co">www.siata.gov.co</a>
+          </div>
         </div>
         <div className="contact-container">
           <ul>

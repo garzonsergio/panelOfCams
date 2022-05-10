@@ -13,7 +13,7 @@ const linksCamsAMVA = [
   "ultimacam_82_TORRESIATA_suroriente.jpg",
   "ultimacam_deslizamiento_rodeo_alto.jpg",
   "ultimacam_deslizamiento_edificio_rodeo_alto.jpg",
-  "ultimacam_deslizamiento_palmas_carulla.jpg",
+  // "ultimacam_deslizamiento_palmas_carulla.jpg",
   "ultimacam_deslizamiento_el_pacifico.jpg",
   "ultimacam_deslizamiento_metro_acevedo.jpg",
   "ultimacam_deslizamiento_villatina.jpg",
@@ -63,19 +63,19 @@ function camsDetails(array) {
         typeOfCam: "cielo",
         nameOfCam: `${titleFilter(array[i])}`,
       });
-    } else if (i < 21) {
+    } else if (i < 20) {
       cams.push({
         route: `${url}${array[i]}`,
         typeOfCam: "movimientos de masa",
         nameOfCam: `${titleFilter(array[i])}`,
       });
-    } else if (i < 32) {
+    } else if (i < 31) {
       cams.push({
         route: `${url}${array[i]}`,
         typeOfCam: "incendio",
         nameOfCam: `${titleFilter(array[i])}`,
       });
-    } else if (i > 31) {
+    } else if (i > 30) {
       cams.push({
         route: `${url}${array[i]}`,
         typeOfCam: "nivel",
