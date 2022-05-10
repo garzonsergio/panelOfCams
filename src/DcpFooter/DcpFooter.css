@@ -32,7 +32,7 @@ footer {
   padding: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 972px) {
   .social-media-container {
     display: flex;
     flex-direction: row;
@@ -70,7 +70,7 @@ footer {
   } */
 }
 
-@media (min-width: 768px) {
+@media (min-width: 972px) {
   footer {
     display: flex;
     flex-direction: row;
@@ -128,4 +128,18 @@ footer {
     font-style: italic;
     font-weight: 600;
   } */
+}
+
+@media (min-width: 1600px) {
+  .websites-container,
+  .contact-container {
+    margin: 0 50px;
+  }
+
+  .social-media-container {
+    margin-left: 50px;
+  }
+  .twitter-users {
+    margin-right: 50px;
+  }
 }
