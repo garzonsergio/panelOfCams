@@ -7,31 +7,34 @@ import { DcpContext } from "../DcpContext";
 function DcpCameraGrid(props) {
   return (
     <DcpContext.Consumer>
-      {({ scrollId, searchedCams }) => (
+      {({ scrollId, searchedCams, searchCam }) => (
         <React.Fragment>
-          <section className="cameras-grid-container" ref={scrollId}>
-            {camsSiata
-              .filter((cam) => cam.typeOfCam === props.typeCam)
-              .map((cam) => (
+          {!searchCam ? (
+            <section className="cameras-grid-container" ref={scrollId}>
+              {camsSiata
+                .filter((cam) => cam.typeOfCam === props.typeCam)
+                .map((cam) => (
+                  <DcpCam
+                    route={cam.route}
+                    key={cam.route}
+                    nameOfCam={cam.nameOfCam}
+                  />
+                ))}
+            </section>
+          ) : (
+            <section
+              className="cameras-grid-container searched-container"
+              ref={scrollId}
+            >
+              {searchedCams.map((cam) => (
                 <DcpCam
                   route={cam.route}
                   key={cam.route}
                   nameOfCam={cam.nameOfCam}
                 />
               ))}
-          </section>
-          <span>
-            Searchedddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
-          </span>
-          <section className="cameras-grid-container" ref={scrollId}>
-            {searchedCams.map((cam) => (
-              <DcpCam
-                route={cam.route}
-                key={cam.route}
-                nameOfCam={cam.nameOfCam}
-              />
-            ))}
-          </section>
+            </section>
+          )}{" "}
         </React.Fragment>
       )}
     </DcpContext.Consumer>

@@ -7,8 +7,10 @@ function DcpHeader() {
   return (
     <React.Fragment>
       <header>
-        <h1>Visualizador de Cámaras AMVA</h1>
-        <DcpSearch />
+        <div className="left-header-container">
+          <h1>Visualizador de Cámaras AMVA</h1>
+          <DcpSearch />
+        </div>
         <img className="companyLogo" src={LogoSiata} alt="logo Siata" />
       </header>
     </React.Fragment>

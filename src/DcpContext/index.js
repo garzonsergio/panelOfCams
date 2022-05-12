@@ -38,14 +38,14 @@ function DcpProvider(props) {
 
   const playFunction = () => {
     !play
-      ? (intervalId.current = setInterval(changeIndexCams, 12000))
+      ? (intervalId.current = setInterval(changeIndexCams, 40000))
       : clearInterval(intervalId.current);
     setPlay((play) => !play);
   };
 
   useEffect(() => {
     console.log(intervalId);
-    intervalId.current = setInterval(changeIndexCams, 12000);
+    intervalId.current = setInterval(changeIndexCams, 40000);
 
     return () => clearInterval(intervalId.current);
   }, []);
