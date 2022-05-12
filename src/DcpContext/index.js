@@ -1,8 +1,24 @@
 import React, { useEffect, useState, useRef } from "react";
-import { useLocalStorage } from "./localStorage";
+import { camsSiata } from "../DcpCameraGrid/ListOfCams";
+
 const DcpContext = React.createContext();
 
 function DcpProvider(props) {
+  //searchFunction
+  let searchedCams = [];
+  const [searchCam, setSearchCam] = React.useState("");
+
+  if (searchCam.length < 1) {
+    searchedCams = [];
+  } else {
+    searchedCams = camsSiata.filter((cam) => {
+      const camText = cam.nameOfCam.toLowerCase();
+      const searchText = searchCam.toLowerCase();
+
+      return camText.includes(searchText);
+    });
+  }
+
   // State to Control Reloading of Cams' picture
   const [reload, setReload] = useState(0);
   useEffect(() => {
@@ -67,6 +83,9 @@ function DcpProvider(props) {
   return (
     <DcpContext.Provider
       value={{
+        searchCam,
+        setSearchCam,
+        searchedCams,
         reload,
         setReload,
         index,
