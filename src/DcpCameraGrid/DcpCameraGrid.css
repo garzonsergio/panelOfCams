@@ -34,9 +34,15 @@
   .cameras-grid-container {
     grid-template-columns: repeat(8, minmax(203px, 1fr));
   }
+  .searched-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
 }
 @media (min-width: 2560px) {
   .cameras-grid-container {
     grid-template-columns: repeat(8, minmax(205px, 1fr));
+  }
+  .searched-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 }
