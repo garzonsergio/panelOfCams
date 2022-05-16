@@ -1,5 +1,6 @@
 import React from "react";
 import { DcpContext } from "../DcpContext";
+import SearchGlass from "../assets/img/search-glass.svg";
 import "./DcpSearch.css";
 
 function DcpSearch() {
@@ -9,11 +10,14 @@ function DcpSearch() {
   };
   return (
     <React.Fragment>
-      <input
-        placeholder="Buscar Cámara"
-        value={searchCam}
-        onChange={onSearchValueChange}
-      />
+      <div className="search-header--container">
+        <img className="searchGlass" src={SearchGlass} alt="lupa" />
+        <input
+          placeholder="Buscar Cámara"
+          value={searchCam}
+          onChange={onSearchValueChange}
+        />
+      </div>
     </React.Fragment>
   );
 }

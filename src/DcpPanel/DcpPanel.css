@@ -37,6 +37,7 @@ main {
     min-width: 28%;
   }
   .local {
+    border-color: red;
     display: none;
   }
 }
@@ -94,6 +95,7 @@ main {
   border-bottom: 1.2rem solid transparent;
   cursor: pointer;
 }
+
 .left-arrow-buttom {
   border-right: 2.4rem solid var(--blue-light-secondary-2);
 }

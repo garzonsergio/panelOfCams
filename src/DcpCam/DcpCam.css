@@ -12,30 +12,44 @@
 
 .cam-container {
   border: 1px solid var(--blue-light-secondary-1);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  /* display: flex; */
+  /* flex-direction: column;
+  justify-content: space-between; */
   text-align: center;
   margin: 0;
   width: 100%;
+  position: relative;
 }
 .cam-container > a {
   margin: 0;
   padding: 0;
   width: 100%;
+  z-index: 2;
 }
 .cam-container > a > img {
   aspect-ratio: 1/1;
   background-color: black;
   object-fit: contain;
-  /* width: 22.5vw; */
-  /* width: 12vw; */
+  /* width: 22.5vw;
+  width: 12vw; */
   width: 100%;
+  max-width: 203px;
 }
 
 .cam-container > .title-cam {
-  font-size: 1rem;
-  font-weight: 500;
+  background-color: rgba(0, 77, 86, 40%);
+  bottom: 0;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
   font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  height: 22.5%;
+  justify-content: center;
+  margin: 0;
+  position: absolute;
+  text-align: center;
   text-transform: capitalize;
+  width: 100%;
 }
