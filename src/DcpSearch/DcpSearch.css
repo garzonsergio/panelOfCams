@@ -37,3 +37,37 @@ input {
   filter: drop-shadow(1px 1px 1px var(--teal-dark-primary));
   margin-bottom: 1px;
 }
+
+@media (min-width: 1920px) {
+  input {
+    height: 5rem;
+    font-size: large;
+    padding: 0 1rem 0 6rem;
+    border-radius: 1rem;
+  }
+
+  .searchGlass {
+    width: 55px;
+    left: 80px;
+  }
+  .search-header--container > input:focus {
+    width: 320px;
+  }
+}
+
+@media (min-width: 2560px) {
+  input {
+    height: 7rem;
+    font-size: x-large;
+    padding: 0 1rem 0 8rem;
+    border-radius: 1rem;
+  }
+
+  .searchGlass {
+    width: 65px;
+    left: 95px;
+  }
+  .search-header--container > input:focus {
+    width: 400px;
+  }
+}
