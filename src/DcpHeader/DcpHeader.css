@@ -37,7 +37,16 @@ header > h1 {
 
   .companyLogo {
     max-width: 250px;
-    min-width: 50px;
-    padding: 7px 28px;
+  }
+}
+
+@media (min-width: 1920px) {
+  header > h1 {
+    padding: 0px 2.8rem;
+    font-size: 3.2rem;
+  }
+
+  .companyLogo {
+    max-width: 250px;
   }
 }
