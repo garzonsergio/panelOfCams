@@ -1,8 +1,24 @@
 import React, { useEffect, useState, useRef } from "react";
+import { camsSiata } from "../DcpCameraGrid/ListOfCams";
 
 const DcpContext = React.createContext();
 
 function DcpProvider(props) {
+  //searchFunction
+  let searchedCams = [];
+  const [searchCam, setSearchCam] = React.useState("");
+
+  if (searchCam.length < 1) {
+    searchedCams = [];
+  } else {
+    searchedCams = camsSiata.filter((cam) => {
+      const camText = cam.nameOfCam.toLowerCase();
+      const searchText = searchCam.toLowerCase();
+
+      return camText.includes(searchText);
+    });
+  }
+
   // State to Control Reloading of Cams' picture
   const [reload, setReload] = useState(0);
   useEffect(() => {
@@ -22,14 +38,14 @@ function DcpProvider(props) {
 
   const playFunction = () => {
     !play
-      ? (intervalId.current = setInterval(changeIndexCams, 12000))
+      ? (intervalId.current = setInterval(changeIndexCams, 40000))
       : clearInterval(intervalId.current);
     setPlay((play) => !play);
   };
 
   useEffect(() => {
     console.log(intervalId);
-    intervalId.current = setInterval(changeIndexCams, 12000);
+    intervalId.current = setInterval(changeIndexCams, 40000);
 
     return () => clearInterval(intervalId.current);
   }, []);
@@ -61,12 +77,18 @@ function DcpProvider(props) {
       : moveLeft();
 
   useEffect(() => {
-    setInterval(() => autoScroll(), 20000);
+    setInterval(() => {
+      autoScroll();
+    }, 3000);
+    setInterval(() => autoScroll(), 3000);
   }, []);
 
   return (
     <DcpContext.Provider
       value={{
+        searchCam,
+        setSearchCam,
+        searchedCams,
         reload,
         setReload,
         index,

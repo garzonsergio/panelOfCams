@@ -11,11 +11,33 @@
 @media (min-width: 768px) {
   .cameras-grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(12, minmax(205px, 1fr));
     grid-template-rows: 1fr 1fr;
-    overflow: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
     width: 100%;
     gap: 0.5rem;
-    scroll-behavior: smooth;
+  }
+
+  .searched-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1920px) {
+  .cameras-grid-container {
+    grid-template-columns: repeat(8, minmax(203px, 1fr));
+  }
+  .searched-container {
+    grid-template-columns: repeat(auto-fit, minmax(203px, 1fr));
+  }
+}
+@media (min-width: 2560px) {
+  .cameras-grid-container {
+    grid-template-columns: repeat(8, minmax(205px, 1fr));
+  }
+  .searched-container {
+    grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
   }
 }
