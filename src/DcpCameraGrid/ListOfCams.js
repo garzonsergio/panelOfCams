@@ -196,7 +196,7 @@ function camsDetails(array) {
       });
     }
   }
-
+  console.log(cams);
   return cams;
 }
 

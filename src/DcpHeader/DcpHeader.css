@@ -3,7 +3,7 @@ header {
   background-color: var(--teal-dark-primary);
   color: var(--white);
   display: grid;
-  grid-template-columns: 7fr 1fr 1fr;
+  grid-template-columns: 7fr 1.5fr 1.2fr;
   height: 10vh;
   overflow: hidden;
   width: 100vw;
