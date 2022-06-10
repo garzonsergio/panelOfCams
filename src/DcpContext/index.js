@@ -29,7 +29,6 @@ function DcpProvider(props) {
   };
 
   useEffect(() => {
-    console.log(intervalId);
     intervalId.current = setInterval(changeIndexCams, 12000);
 
     return () => clearInterval(intervalId.current);

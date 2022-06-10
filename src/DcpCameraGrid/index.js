@@ -4,9 +4,10 @@ import { DcpCam } from "../DcpCam";
 import { camsSiata } from "./ListOfCams";
 import { DcpContext } from "../DcpContext";
 import { Modal } from "../Modal";
+import Close from "../assets/img/close.svg";
 
 function DcpCameraGrid(props) {
-  const { scrollId, openModal } = React.useContext(DcpContext);
+  const { scrollId, openModal, setOpenModal } = React.useContext(DcpContext);
   return (
     <React.Fragment>
       <section className="cameras-grid-container" ref={scrollId}>
@@ -20,9 +21,25 @@ function DcpCameraGrid(props) {
             />
           ))}
       </section>
+      {/* Modal that shows images in front of the others */}
       {!!openModal && (
         <Modal>
-          <p>this text</p>
+          <section className="modal-container">
+            <figure className="modal-picture-container">
+              <img
+                className="modal-picture"
+                alt="imagen"
+                src="https://siata.gov.co/ultimasFotosCamaras/ultimacam_FishEye_EAFIT.jpg?1654868879935"
+              />
+              <p>Nombre de Cámara</p>
+            </figure>
+            <img
+              className="close-button"
+              src={Close}
+              alt="cerrar"
+              onClick={() => setOpenModal(false)}
+            />
+          </section>
         </Modal>
       )}
     </React.Fragment>

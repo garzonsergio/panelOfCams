@@ -6,16 +6,36 @@
     gap: 0.5rem;
     scroll-behavior: smooth;
   }
+  .modal-picture {
+    max-width: 80vw;
+  }
 }
 
 @media (min-width: 768px) {
   .cameras-grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     overflow: hidden;
     width: 100%;
     gap: 0.5rem;
     scroll-behavior: smooth;
   }
+
+  .modal-picture {
+    max-height: 75vh;
+  }
+}
+.modal-container {
+  display: flex;
+}
+.close-button {
+  cursor: pointer;
+  height: 30px;
+}
+
+.modal-picture-container {
+  background-color: var(--white);
+  padding: 15px 20px 70px 20px;
+  box-shadow: 0 50px 100px 20px rgb(255 255 255 / 20%);
 }
