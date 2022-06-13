@@ -26,10 +26,10 @@ function DcpCam(props) {
             <figure className="modal-picture-container">
               <img
                 className="modal-picture"
-                alt={modalData.nameOfCam}
-                src={modalData.route}
+                alt={modalData?.nameOfCam}
+                src={modalData?.route}
               />
-              <p>{modalData.nameOfCam}</p>
+              <p>{modalData?.nameOfCam}</p>
             </figure>
             <img
               className="close-button"
