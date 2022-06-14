@@ -31,6 +31,10 @@ function DcpProvider(props) {
   // Play button state
   const [play, setPlay] = useState(true);
 
+  //Controls of modal images
+  const [openModal, setOpenModal] = useState(false);
+  const [modalData, setModalData] = useState({});
+
   // Timer of Switching cameras and Play control
   const [index, setIndex] = useState(0);
   let intervalId = useRef();
@@ -101,6 +105,10 @@ function DcpProvider(props) {
         moveLeft,
         moveGroupRight,
         moveGroupLeft,
+        openModal,
+        setOpenModal,
+        modalData,
+        setModalData,
       }}
     >
       {props.children}

@@ -6,6 +6,9 @@
     gap: 0.5rem;
     scroll-behavior: smooth;
   }
+  .modal-picture {
+    max-width: 80vw;
+  }
 }
 
 @media (min-width: 768px) {
@@ -40,4 +43,32 @@
   .searched-container {
     grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
   }
+}
+
+.modal-picture {
+  max-height: 75vh;
+}
+
+.modal-container {
+  display: flex;
+}
+.close-button {
+  cursor: pointer;
+  height: 30px;
+}
+
+.modal-picture-container {
+  background-color: var(--white);
+  padding: 15px 20px 70px 20px;
+  box-shadow: 0 5px 20px 2px rgb(255 255 255 / 10%);
+}
+
+.modal-picture-container > p {
+  width: 100%;
+  font-size: x-large;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
 }

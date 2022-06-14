@@ -2,10 +2,10 @@
   .cam-container {
     min-width: 100%;
   }
-  .cam-container > a {
+  .cam-container > picture {
     min-width: 100%;
   }
-  .cam-container > a > img {
+  .cam-container > picture > img {
     min-width: 100%;
   }
 }
@@ -20,13 +20,14 @@
   width: 100%;
   position: relative;
 }
-.cam-container > a {
+.cam-container > picture {
+  cursor: pointer;
   margin: 0;
   padding: 0;
   width: 100%;
   z-index: 2;
 }
-.cam-container > a > img {
+.cam-container > picture > img {
   aspect-ratio: 1/1;
   background-color: black;
   object-fit: contain;
@@ -40,6 +41,7 @@
   background-color: rgba(0, 77, 86, 40%);
   bottom: 0;
   color: var(--white);
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   font-family: "Segoe UI", Arial, Helvetica, sans-serif;
