@@ -12,9 +12,16 @@ footer {
   margin: 0 0.8rem 0 0.8rem;
   width: 1.8rem;
 }
-
+.social-media-container {
+  min-width: 136px;
+}
+.websites-container > .websites-links {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
 .websites-container > a,
-.websites-container > span > a,
+.websites-container > .websites-links > a,
 .twitter-users > a {
   text-decoration: none;
   color: var(--white);
@@ -25,7 +32,7 @@ footer {
   padding: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 972px) {
   .social-media-container {
     display: flex;
     flex-direction: row;
@@ -63,14 +70,15 @@ footer {
   } */
 }
 
-@media (min-width: 768px) {
+@media (min-width: 972px) {
   footer {
     display: flex;
     flex-direction: row;
-    padding: 1.8rem;
+    padding: 1.8rem 5rem;
   }
-  .social-media-container {
-    margin-top: 0.3rem;
+  .social-media-container,
+  .websites-container > .mediaImage {
+    margin-top: 1.2rem;
   }
 
   .twitter-users,
@@ -81,7 +89,7 @@ footer {
   }
   .twitter-users > a,
   .websites-container > a,
-  .websites-container span > a {
+  .websites-container div > a {
     font-size: 1.4rem;
     padding: 0.2rem 2rem 0.2rem 0.8rem;
   }
@@ -91,13 +99,15 @@ footer {
 
   .websites-container {
     margin-left: 2rem;
-  }
-  .websites-container > span {
-    align-items: center;
     display: flex;
+    flex-direction: row;
   }
-  .websites-container > a {
-    margin-left: 3.4rem;
+  .websites-links > a {
+    text-align: left;
+  }
+
+  .websites-container > .mediaImage {
+    height: 18px;
   }
   .contact-container {
     text-align: left;
@@ -139,5 +149,19 @@ footer {
 @media (min-width: 2560px) {
   footer {
     padding-left: 9rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .websites-container,
+  .contact-container {
+    margin: 0 50px;
+  }
+
+  .social-media-container {
+    margin-left: 50px;
+  }
+  .twitter-users {
+    margin-right: 50px;
   }
 }
